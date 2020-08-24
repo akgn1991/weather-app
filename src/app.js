@@ -6,6 +6,8 @@ const geocode= require('./utils/geocode')
     
 
 const app=express()
+const port =process.env.PORT || 8080
+
 //Define paths for express config 
 const publicpath= path.join(__dirname,'../public')
 const viewpath=path.join(__dirname,'../templates/views')
@@ -100,8 +102,8 @@ app.get('/products',(req,res)=>{
            
         })
     })
-app.listen(8080,()=>{
-    console.log('Port 8080 opened!!!!!!')
+app.listen(port,()=>{
+    console.log('Port '+port+' opened!!!!!!')
 
 })
 

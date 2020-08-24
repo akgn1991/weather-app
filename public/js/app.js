@@ -18,7 +18,7 @@ else{
 messageone.textContent='Loading...'
 messagetwo.textContent=''
 
-fetch('http://localhost:8080/weather?address='+location).then((response)=>{
+fetch('/weather?address='+location).then((response)=>{
     response.json().then((data1)=>{
         if(data1.error){
             messageone.textContent=data1.error
